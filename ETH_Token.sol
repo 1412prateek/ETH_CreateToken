@@ -22,7 +22,7 @@ contract MyToken {
 
     string public tokenName = "MyToken";
     string public tokenAbbrv = "MTK";
-    uint256 public totalSupply;
+    uint256 public totalSupply = 0;
 
     // mapping variable here
 
