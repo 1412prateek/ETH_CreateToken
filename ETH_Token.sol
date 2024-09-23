@@ -22,11 +22,11 @@ contract MyToken {
 
     string public tokenName = "MyToken";
     string public tokenAbbrv = "MTK";
-    uint256 public totalSupply = 0;
+    uint public totalSupply = 0;
 
     // mapping variable here
 
-    mapping (address => uint256) public balance;
+    mapping (address => uint) public balance;
 
     // mint function
     function mint(address _to, uint256 _value) public {
@@ -35,7 +35,7 @@ contract MyToken {
     }
 
     // burn function
-    function burn(address _to, uint256 _value) public {
+    function burn(address _to, uint _value) public {
       require(balance[_to] >= _value, "Insufficient balance to burn");
 
 
